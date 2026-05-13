@@ -59,7 +59,7 @@ export default function Navbar() {
           >
             <img src="/Logo.png" alt="Green Milestone" className="w-10 h-10 object-contain" />
             <span
-              className={`font-bold text-xl tracking-tight transition-colors ${isScrolled ? "text-emerald-950" : "text-emerald-950 lg:text-white"
+              className={`font-bold text-xl tracking-tight transition-colors ${isScrolled ? "text-emerald-950" : "text-white"
                 }`}
             >
               Green Milestone
@@ -73,7 +73,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className={`text-sm font-medium transition-colors hover:text-emerald-600 ${isScrolled ? "text-slate-600" : "text-slate-600 lg:text-white/90 lg:hover:text-white"
+                className={`text-sm font-medium transition-colors hover:text-emerald-600 ${isScrolled ? "text-slate-600" : "text-white/90 hover:text-white"
                   }`}
               >
                 {link.name}
@@ -90,7 +90,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className={`md:hidden p-2 rounded-md transition-colors ${isScrolled ? "text-slate-900" : "text-slate-900 lg:text-white"
+            className={`md:hidden p-2 rounded-md transition-colors ${isScrolled ? "text-slate-900" : "text-white"
               }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"

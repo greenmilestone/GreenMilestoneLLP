@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-10 lg:py-16 -mt-8 lg:-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-10 pb-32 lg:py-16 -mt-8 lg:-mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
 
           {/* Left Content */}
@@ -54,6 +54,27 @@ export default function Hero() {
             <motion.p variants={itemVariants} className="text-sm sm:text-base text-emerald-100/80 mb-5 leading-relaxed max-w-xl">
               Green Milestone is a premier sustainability consultancy driving carbon-neutral growth. We specialize in GHG Auditing, Carbon Credits, and bespoke Climate Strategy Services.
             </motion.p>
+
+            {/* Mobile Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative lg:hidden mb-8 w-full max-w-[28rem]"
+            >
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                <img
+                  src="/Hero.jpeg"
+                  alt="Climate Action"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/10 to-transparent" />
+                <div className="absolute inset-0 p-4 flex flex-col justify-end">
+                  <h3 className="text-sm font-bold text-white mb-0.5">Accelerating Climate Action</h3>
+                  <p className="text-emerald-100/70 text-xs">Expert consulting for ESG and Carbon Credits.</p>
+                </div>
+              </div>
+            </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3">
               <a
@@ -130,8 +151,8 @@ export default function Hero() {
       </div>
 
       {/* Bottom Curve Divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+      <div className="absolute -bottom-px left-0 right-0 overflow-hidden leading-[0]">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto relative -bottom-px">
           <path d="M0 120L1440 120V0C1440 0 1100 80 720 80C340 80 0 0 0 0V120Z" fill="#f8fafc" />
         </svg>
       </div>

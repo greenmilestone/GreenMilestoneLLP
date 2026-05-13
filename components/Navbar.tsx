@@ -33,10 +33,22 @@ export default function Navbar() {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
+
+    // Using a small timeout to ensure the state update (closing menu) doesn't interfere with the scroll
+    setTimeout(() => {
+      const targetId = href.startsWith("#") ? href.substring(1) : href;
+      const element = document.getElementById(targetId);
+      if (element) {
+        const navbarHeight = 80; // Estimated height of fixed navbar
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
   };
 
   return (

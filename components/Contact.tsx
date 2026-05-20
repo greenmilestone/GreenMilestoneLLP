@@ -83,8 +83,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-base font-bold text-slate-900 mb-1">Email Us</h4>
-                  <a href="mailto:careers.greenmilestone@gmail.com" className="text-sm text-slate-600 hover:text-emerald-600 transition-colors">
-                    careers.greenmilestone@gmail.com
+                  <a href="mailto:support@greenmilestone.in" className="text-sm text-slate-600 hover:text-emerald-600 transition-colors">
+                    support@greenmilestone.in
                   </a>
                 </div>
               </div>
